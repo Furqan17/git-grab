@@ -1,0 +1,19 @@
+{
+  "name": "git-grab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Furqan17/git-grab.git"
+  },
+  "author": "Furqan17",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Furqan17/git-grab/issues"
+  },
+  "homepage": "https://github.com/Furqan17/git-grab#readme"
+}
