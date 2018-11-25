@@ -1,0 +1,25 @@
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.font-noto {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.font-robo {
+    font-family: 'Roboto', sans-serif;
+}
+
+.cont-font {
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+}
+
+.cont_C-img {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+}
