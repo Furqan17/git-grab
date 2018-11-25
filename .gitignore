@@ -7,3 +7,7 @@ typings/
 # Optional npm cache directory
 .npm
 
+#VSCode files
+.vscode/ 
+
+
