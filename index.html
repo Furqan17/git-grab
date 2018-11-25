@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Git-Grab</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- <link rel="stylesheet" href="styles/debug.css"> -->
+    <style>
+    .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    </style>
+  </head>
+
+  <body>
+    <!-- top input/button section -->
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+
+                <div class="column is-one-third">
+                    <!-- empty column -->
+                </div>
+
+                <!-- main column -->
+                <div class="column is-one-third">
+                    <h1 class="title is-size-2 center font-robo">Git-Grab</h1>
+                    <p class="subtitle is-size-5 center font-noto" >a github profile retriever</p>
+
+                    <!-- the input field -->
+                    <div class="field is-small">
+                        <p class="control has-icons-left">
+                            <input class="input is-rounded font-noto" id="searchInput" placeholder="Username">
+                            <span class="icon is-medium is-left">
+                                <i class="fab fa-github"></i>
+                            </span>
+                        </p>
+                    </div>
+                    <!-- end of input field -->
+
+                    <!-- submit button -->
+                    <div class="center">
+                        <button class="button is-dark is-outlined is-normal" id="searchButton" style="margin:5px;">
+                        <span class="icon is-small">
+                            <i class="fas fa-search"></i>
+                        </span>
+                        <span><strong >Search</strong></span>
+                        </button>
+                    </div>
+                    <!-- end of submit button -->
+
+                </div>
+                <!-- end of main column -->
+
+                <div class="column is-one-third">
+                    <!-- empty column -->
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- end of top input/button section -->
+
+    <!-- top Profile--1 show section -->
+    <section class="section">
+        <div class="container">
+
+            <!-- Columns from A, B, C -->
+            <div class="columns">
+
+                <!-- Column A -->
+                <div class="column center is-one-third">
+                    <div class="columns is-multiline">
+                        <div class="column is-full" style="padding:4px">
+                            <p class="center main_column_A_name font-noto"> </p>
+                        </div>
+                        <div class="column is-full" style="padding:4px">
+                            <p class="center main_column_A_username font-noto"> </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Column A -->
+
+                <!-- Column B -->
+                <div class="column center is-one-third">
+                    <div class="columns is-multiline">
+                        <div class="column is-full" style="padding:4px">
+                            <p class="center main_column_B_location font-noto"> </p>
+                        </div>
+                        <div class="column is-full" style="padding:4px">
+                            <p class="center main_column_B_organizations font-noto"> </p>
+                        </div>
+                        <div class="column is-full" style="padding:4px">
+                            <p class="center main_column_B_bio font-noto"> </p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <!-- End of Column B -->
+
+                <!-- Column C -->
+                <div class="column center is-one-third">
+                    <div class="column is-full" style="padding:4px">
+                        <div class="center main_column_C_image"> </div>
+                    </div>
+                </div>
+                <!-- End of Column C -->
+
+            </div>
+            <!-- End of Columns from A, B, C -->
+
+            <!-- Columns from D, E, F -->
+            <div class="columns">
+
+                <!-- Column D -->
+                <div class="column center is-one-third">
+                    <p class="main_column_D"> </p>
+                </div>
+                <!-- End of Column D -->
+
+                <!-- Column E -->
+                <div class="column center is-one-third">
+                    <p class="main_column_E"> </p>
+                </div>
+                <!-- End of Column E -->
+
+                <!-- Column F -->
+                <div class="column center is-one-third">
+                    <p class="main_column_F"> </p>
+                </div>
+                <!-- End of Column F -->
+
+            </div>
+            <!-- End of Columns from D, E, F -->
+
+        </div>
+    </section>
+    <!-- end of top Profile--1 show section -->
+
+    <!-- script.js  -->
+    <script src="index.js"></script>
+  </body>
+</html>
