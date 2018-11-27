@@ -46,7 +46,12 @@ const showData = () => {
         container_A_username.innerHTML = `<span class="cont-font font-noto">Username: &nbsp </span>${res.data.login}`
 
         // container B changes
-        container_B_locat.innerHTML = `<span class="cont-font font-noto">Location: &nbsp </span>${res.data.location}`
+        if (res.data.locat !== null ) {
+            container_B_locat.innerHTML = `<span class="cont-font font-noto">Location: &nbsp </span>${res.data.location}`
+        } else {
+            container_B_locat.innerHTML = `<span class="cont-font font-noto">Location: &nbsp </span> Not available`
+        }
+        
         container_B_orgs.innerHTML = `<span class="cont-font font-noto">Organizations: &nbsp </span>${res.data.company}`
         if (res.data.bio !== null) {
             container_B_bio.innerHTML = `<span class="font-noto"> ${res.data.bio}</span>`
