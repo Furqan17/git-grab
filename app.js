@@ -20,6 +20,7 @@ const container_E = document.querySelector(".main_column_E");
 const container_F = document.querySelector(".main_column_F");
 
 // Github API Tokens
+// Get tokens from registering an app on github 
 const client_id = "xxxxxxxxxxxxxxxxxxxx";
 const client_secret = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
 
