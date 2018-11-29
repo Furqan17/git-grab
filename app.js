@@ -61,7 +61,7 @@ const showData = () => {
         }
 
         // conditions for user bio
-        if (res.data.bio !== null) {
+        if ( nullRes(res.data.bio) ) {
             container_B_bio.innerHTML = `<span class="font-noto"> ${res.data.bio}</span>`
         } else {
             container_B_bio.innerHTML = ``
