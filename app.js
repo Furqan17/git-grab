@@ -73,6 +73,14 @@ const showData = () => {
     }) 
 }
 
+const nullRes = (data) => {
+    if (data !== null) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 searchButton.addEventListener("click", () => {
     showData();
 })
