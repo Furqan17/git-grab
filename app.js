@@ -38,11 +38,11 @@ const showData = () => {
         console.log(res);
 
         // container A changes
-        if (res.data.name !== null) {
+        if ( nullRes(res.data.name) ) {
             container_A_name.innerHTML = `<span class="cont-font font-noto">Name: &nbsp </span>${res.data.name}`
         } else {
             container_A_name.innerHTML = `<span class="cont-font font-noto">Name: &nbsp </span> Not available`
-        }
+        } 
         container_A_username.innerHTML = `<span class="cont-font font-noto">Username: &nbsp </span>${res.data.login}`
 
         // container B changes
