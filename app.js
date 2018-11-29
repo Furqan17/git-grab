@@ -47,17 +47,17 @@ const showData = () => {
 
         // container B changes
         // conditions for location
-        if (res.data.locat !== null ) {
+        if ( nullRes(res.data.location)) {
             container_B_locat.innerHTML = `<span class="cont-font font-noto">Location: &nbsp </span>${res.data.location}`
         } else {
             container_B_locat.innerHTML = `<span class="cont-font font-noto">Location: &nbsp </span> Not available`
         }
 
         // conditions for organizations
-        if (res.data.orgs !== null ) {
+        if ( nullRes(res.data.company) ) {
             container_B_orgs.innerHTML = `<span class="cont-font font-noto">Organizations: &nbsp </span>${res.data.company}`
         } else {
-        container_B_orgs.innerHTML = `<span class="cont-font font-noto">Organizations: &nbsp </span>${res.data.company}`
+            container_B_orgs.innerHTML = `<span class="cont-font font-noto">Organizations: &nbsp </span>${res.data.company}`
         }
 
         // conditions for user bio
