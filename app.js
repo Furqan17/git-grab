@@ -14,8 +14,9 @@ const container_B_orgs = document.querySelector(".main_column_B_organizations");
 // Dom element image for container C
 const container_C_img = document.querySelector(".main_column_C_image");
 
-
+// Dom elements for container D
 const container_D = document.querySelector(".main_column_D");
+
 const container_E = document.querySelector(".main_column_E");
 const container_F = document.querySelector(".main_column_F");
 
@@ -57,7 +58,7 @@ const showData = () => {
         if ( nullRes(res.data.company) ) {
             container_B_orgs.innerHTML = `<span class="cont-font font-noto">Organizations: &nbsp </span>${res.data.company}`
         } else {
-            container_B_orgs.innerHTML = `<span class="cont-font font-noto">Organizations: &nbsp </span>${res.data.company}`
+            container_B_orgs.innerHTML = `<span class="cont-font font-noto">Organizations: &nbsp </span> None`
         }
 
         // conditions for user bio
