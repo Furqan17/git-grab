@@ -74,9 +74,9 @@ const showData = () => {
         // container E
         // conditions for user bio
         if ( nullRes(res.data.bio) ) {
-            container_B_bio.innerHTML = `<span class="font-noto"> ${res.data.bio}</span>`
+            container_B_bio.innerHTML = `<span class="cont-font">Bio: &nbsp </span>${res.data.bio}`
         } else {
-            container_B_bio.innerHTML = ``
+            container_B_bio.innerHTML = `<span class="cont-font">Bio: &nbsp </span><p class="font-noto> not available </p>`
         }
 
         
