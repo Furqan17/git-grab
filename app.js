@@ -68,8 +68,9 @@ const showData = () => {
         container_C_img.innerHTML = `<img class="cont_C-img" src=${res.data.avatar_url}>`
 
         // container D
-        // follower container
+        // follower & following container
         container_D_followers.innerHTML = `<span class="cont-font "> Followers: &nbsp </span>${res.data.followers}`
+        container_D_following.innerHTML = `<span class="cont-font "> Following: &nbsp </span>${res.data.following}`
 
         // container E
         // conditions for user bio
