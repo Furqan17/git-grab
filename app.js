@@ -15,7 +15,8 @@ const container_B_orgs = document.querySelector(".main_column_B_organizations");
 const container_C_img = document.querySelector(".main_column_C_image");
 
 // Dom elements for container D
-const container_D = document.querySelector(".main_column_D");
+const container_D_followers = document.querySelector(".main_column_D_followers");
+const container_D_following = document.querySelector(".main_column_D_following");
 
 const container_E = document.querySelector(".main_column_E");
 const container_F = document.querySelector(".main_column_F");
@@ -40,25 +41,25 @@ const showData = () => {
 
         // container A changes
         if ( nullRes(res.data.name) ) {
-            container_A_name.innerHTML = `<span class="cont-font font-noto">Name: &nbsp </span>${res.data.name}`
+            container_A_name.innerHTML = `<span class="cont-font ">Name: &nbsp </span>${res.data.name}`
         } else {
-            container_A_name.innerHTML = `<span class="cont-font font-noto">Name: &nbsp </span> Not available`
+            container_A_name.innerHTML = `<span class="cont-font ">Name: &nbsp </span> Not available`
         } 
-        container_A_username.innerHTML = `<span class="cont-font font-noto">Username: &nbsp </span>${res.data.login}`
+        container_A_username.innerHTML = `<span class="cont-font ">Username: &nbsp </span>${res.data.login}`
 
         // container B changes
         // conditions for location
         if ( nullRes(res.data.location)) {
-            container_B_locat.innerHTML = `<span class="cont-font font-noto">Location: &nbsp </span>${res.data.location}`
+            container_B_locat.innerHTML = `<span class="cont-font ">Location: &nbsp </span>${res.data.location}`
         } else {
-            container_B_locat.innerHTML = `<span class="cont-font font-noto">Location: &nbsp </span> Not available`
+            container_B_locat.innerHTML = `<span class="cont-font ">Location: &nbsp </span> Not available`
         }
 
         // conditions for organizations
         if ( nullRes(res.data.company) ) {
-            container_B_orgs.innerHTML = `<span class="cont-font font-noto">Organizations: &nbsp </span>${res.data.company}`
+            container_B_orgs.innerHTML = `<span class="cont-font ">Organizations: &nbsp </span>${res.data.company}`
         } else {
-            container_B_orgs.innerHTML = `<span class="cont-font font-noto">Organizations: &nbsp </span> None`
+            container_B_orgs.innerHTML = `<span class="cont-font ">Organizations: &nbsp </span> None`
         }
 
         // conditions for user bio
@@ -71,6 +72,8 @@ const showData = () => {
         // container C changes
         container_C_img.innerHTML = `<img class="cont_C-img" src=${res.data.avatar_url}>`
         
+        // follower container
+        container_D_followers.innerHTML = `<span class="cont-font "> Followers: &nbsp </span>${res.data.followers}`
     }) 
 }
 
