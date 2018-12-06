@@ -64,6 +64,14 @@ const showData = () => {
             container_B_orgs.innerHTML = `<span class="cont-font ">Organizations: &nbsp </span> None`
         }
 
+        // container C
+        container_C_img.innerHTML = `<img class="cont_C-img" src=${res.data.avatar_url}>`
+
+        // container D
+        // follower container
+        container_D_followers.innerHTML = `<span class="cont-font "> Followers: &nbsp </span>${res.data.followers}`
+
+        // container E
         // conditions for user bio
         if ( nullRes(res.data.bio) ) {
             container_B_bio.innerHTML = `<span class="font-noto"> ${res.data.bio}</span>`
@@ -71,11 +79,9 @@ const showData = () => {
             container_B_bio.innerHTML = ``
         }
 
-        // container C
-        container_C_img.innerHTML = `<img class="cont_C-img" src=${res.data.avatar_url}>`
         
-        // follower container
-        container_D_followers.innerHTML = `<span class="cont-font "> Followers: &nbsp </span>${res.data.followers}`
+        
+        
     }) 
 }
 
