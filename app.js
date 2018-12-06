@@ -61,7 +61,7 @@ const showData = () => {
         if ( nullRes(res.data.company) ) {
             container_B_orgs.innerHTML = `<span class="cont-font ">Organizations: &nbsp </span>${res.data.company}`
         } else {
-            container_B_orgs.innerHTML = `<span class="cont-font ">Organizations: &nbsp </span> None`
+            container_B_orgs.innerHTML = `<span class="cont-font ">Organizations: &nbsp </span> none`
         }
 
         // container C
@@ -74,9 +74,9 @@ const showData = () => {
         // container E
         // conditions for user bio
         if ( nullRes(res.data.bio) ) {
-            container_B_bio.innerHTML = `<span class="cont-font">Bio: &nbsp </span>${res.data.bio}`
+            container_E_bio.innerHTML = `<span class="cont-font ">Bio: &nbsp </span>${res.data.bio}`
         } else {
-            container_B_bio.innerHTML = `<span class="cont-font">Bio: &nbsp </span><p class="font-noto> not available </p>`
+            container_E_bio.innerHTML = `<span class="cont-font ">Bio: &nbsp </span><p class="font-noto"> none </p>`
         }
 
         

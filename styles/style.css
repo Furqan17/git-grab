@@ -6,6 +6,7 @@
 
 .font-noto {
     font-family: 'Noto Sans', sans-serif;
+    font-size: 18px;
 }
 
 .font-robo {
@@ -14,13 +15,13 @@
 
 .cont-font {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 20px;
     color: black;
     font-family: 'Noto Sans', sans-serif;
 }
 
 .cont_C-img {
-    width: 128px;
-    height: 128px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
 }
