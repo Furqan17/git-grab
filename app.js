@@ -8,7 +8,6 @@ const container_A_username = document.querySelector(".main_column_A_username");
 
 // Dom elements for container B
 const container_B_locat = document.querySelector(".main_column_B_location");
-const container_B_bio = document.querySelector(".main_column_B_bio");
 const container_B_orgs = document.querySelector(".main_column_B_organizations");
 
 // Dom element image for container C
@@ -18,7 +17,10 @@ const container_C_img = document.querySelector(".main_column_C_image");
 const container_D_followers = document.querySelector(".main_column_D_followers");
 const container_D_following = document.querySelector(".main_column_D_following");
 
-const container_E = document.querySelector(".main_column_E");
+// Dom elements for container E
+const container_E_bio = document.querySelector(".main_column_E_bio");
+
+
 const container_F = document.querySelector(".main_column_F");
 
 // Github API Tokens
@@ -39,7 +41,7 @@ const showData = () => {
     grabUsers(inputValue.value).then((res) => {
         console.log(res);
 
-        // container A changes
+        // container A
         if ( nullRes(res.data.name) ) {
             container_A_name.innerHTML = `<span class="cont-font ">Name: &nbsp </span>${res.data.name}`
         } else {
@@ -47,7 +49,7 @@ const showData = () => {
         } 
         container_A_username.innerHTML = `<span class="cont-font ">Username: &nbsp </span>${res.data.login}`
 
-        // container B changes
+        // container B
         // conditions for location
         if ( nullRes(res.data.location)) {
             container_B_locat.innerHTML = `<span class="cont-font ">Location: &nbsp </span>${res.data.location}`
@@ -69,7 +71,7 @@ const showData = () => {
             container_B_bio.innerHTML = ``
         }
 
-        // container C changes
+        // container C
         container_C_img.innerHTML = `<img class="cont_C-img" src=${res.data.avatar_url}>`
         
         // follower container
