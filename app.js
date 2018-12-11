@@ -66,7 +66,8 @@ const showData = () => {
         }
 
         // container C
-        container_C_img.innerHTML = `<img class="cont_C-img" src=${res.data.avatar_url}>`
+        container_C_img.innerHTML = `<a href="https://github.com/${res.data.login}" target="_blank">
+            <img class="cont_C-img" src=${res.data.avatar_url}><a/>`
 
         // container D
         // followers container
