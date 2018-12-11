@@ -70,7 +70,7 @@ const showData = () => {
         // container D
         // follower & following container
         // TODO: Add conditionals for if followers & following == 0
-        container_D_followers.innerHTML = `<span class="cont-font "> Followers: &nbsp </span>${res.data.followers}`
+        container_D_followers.innerHTML = `<span class="cont-font "> Followers: &nbsp </span><a href="https://github.com/${res.data.login}?tab=followers" target="_blank">${res.data.followers}</a>`
         container_D_following.innerHTML = `<span class="cont-font "> Following: &nbsp </span>${res.data.following}`
 
         // container E
