@@ -69,18 +69,22 @@ const showData = () => {
 
         // container D
         // followers container
-        // TODO: Add conditionals for if followers & following == 0
         if ( res.data.followers == 0 ) {
             container_D_followers.innerHTML = `<span class="cont-font "> Followers: &nbsp </span> 
-            <a href="https://github.com/${res.data.login}?tab=followers" target="_blank">none</a>`
+                <a href="https://github.com/${res.data.login}?tab=followers" target="_blank">none</a>`
         } else {
             container_D_followers.innerHTML = `<span class="cont-font "> Followers: &nbsp </span>
-            <a href="https://github.com/${res.data.login}?tab=followers" target="_blank">${res.data.followers}</a>`
+                <a href="https://github.com/${res.data.login}?tab=followers" target="_blank">${res.data.followers}</a>`
         }
 
         // following container
-        container_D_following.innerHTML = `<span class="cont-font "> Following: &nbsp </span>
-            <a href="https://github.com/${res.data.login}?tab=following" target="_blank">${res.data.following}</a>`
+        if ( res.data.following == 0 ) {
+            container_D_following.innerHTML = `<span class="cont-font "> Following: &nbsp </span> 
+                <a href="https://github.com/${res.data.login}?tab=following" target="_blank">none</a>`
+        } else {
+            container_D_following.innerHTML = `<span class="cont-font "> Following: &nbsp </span>
+                <a href="https://github.com/${res.data.login}?tab=following" target="_blank">${res.data.following}</a>`
+        }
 
         // container E
         // conditions for user bio
