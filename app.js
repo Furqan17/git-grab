@@ -25,6 +25,7 @@ const container_F = document.querySelector(".main_column_F");
 
 // Github API Tokens
 // Get tokens from registering an app on github 
+// https://github.com/settings/applications/new
 const client_id = "xxxxxxxxxxxxxxxxxxxx";
 const client_secret = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
 
@@ -100,6 +101,7 @@ const showData = () => {
     }) 
 }
 
+// Function to determine if res.data is null
 const nullRes = (data) => {
     if (data !== null) {
         return true;
