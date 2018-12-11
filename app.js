@@ -91,7 +91,7 @@ const showData = () => {
         if ( nullRes(res.data.bio) ) {
             container_E_bio.innerHTML = `<span class="cont-font ">Bio: &nbsp </span>${res.data.bio}`
         } else {
-            container_E_bio.innerHTML = `<span class="cont-font ">Bio: &nbsp </span><p class="font-noto"> none </p>`
+            container_E_bio.innerHTML = `<span class="cont-font ">Bio: &nbsp </span> none`
         }
 
         
