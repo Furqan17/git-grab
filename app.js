@@ -20,8 +20,10 @@ const container_D_following = document.querySelector(".main_column_D_following")
 // Dom elements for container E
 const container_E_bio = document.querySelector(".main_column_E_bio");
 
-
-const container_F = document.querySelector(".main_column_F");
+// Dom elements for container F
+const container_F_repos = document.querySelector(".main_column_F_repos");
+const container_F_gists = document.querySelector(".main_column_F_gists");
+const container_F_hire = document.querySelector(".main_column_F_hire");
 
 // Github API Tokens
 // Get tokens from registering an app on github 
@@ -29,6 +31,7 @@ const container_F = document.querySelector(".main_column_F");
 const client_id = "xxxxxxxxxxxxxxxxxxxx";
 const client_secret = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
 
+// Fetch Users from github API -> into JSON
 const grabUsers = async (user) => {
     const api_call = await fetch(`https://api.github.com/users/${user}
     ?client_id=${client_id}
@@ -38,7 +41,8 @@ const grabUsers = async (user) => {
     return { data: data }
 };
 
-const showData = () => {
+// displays DOM data
+const displayData = () => {
     grabUsers(inputValue.value).then((res) => {
         console.log(res);
 
@@ -97,9 +101,6 @@ const showData = () => {
         }
 
         // container F
-        // TODO: Add repository info
-
-        
         
         
     }) 
@@ -115,5 +116,5 @@ const nullRes = (data) => {
 }
 
 searchButton.addEventListener("click", () => {
-    showData();
+    displayData();
 })
