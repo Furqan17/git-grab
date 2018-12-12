@@ -101,6 +101,8 @@ const displayData = () => {
         }
 
         // container F
+        container_F_repos.innerHTML = `<span class="cont-font "> Public Respositories: &nbsp </span>${res.data.public_repos}`
+        container_F_gists.innerHTML = `<span class="cont-font "> Public Gists: &nbsp </span>${res.data.public_gists}`
         
         
     }) 
@@ -115,6 +117,7 @@ const nullRes = (data) => {
     }
 }
 
+// Add eventlistender on Search button
 searchButton.addEventListener("click", () => {
     displayData();
 })
