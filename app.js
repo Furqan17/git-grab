@@ -23,7 +23,6 @@ const container_E_bio = document.querySelector(".main_column_E_bio");
 // Dom elements for container F
 const container_F_repos = document.querySelector(".main_column_F_repos");
 const container_F_gists = document.querySelector(".main_column_F_gists");
-const container_F_hire = document.querySelector(".main_column_F_hire");
 
 // Github API Tokens
 // Get tokens from registering an app on github 
@@ -117,7 +116,7 @@ const nullRes = (data) => {
     }
 }
 
-// Add eventlistender on Search button
+// Add eventlistener on Search button
 searchButton.addEventListener("click", () => {
     displayData();
 })
