@@ -63,7 +63,8 @@ const displayData = () => {
 
         // conditions for organizations
         if ( nullRes(res.data.company) ) {
-            container_B_orgs.innerHTML = `<span class="cont-font ">Organizations: &nbsp </span>${res.data.company}`
+            container_B_orgs.innerHTML = `<span class="cont-font ">Organizations: &nbsp </span>
+            <a href="https://api.github.com/users/${res.data.login}/orgs" target="_blank">${res.data.company}</a>`
         } else {
             container_B_orgs.innerHTML = `<span class="cont-font ">Organizations: &nbsp </span> none`
         }
@@ -102,8 +103,6 @@ const displayData = () => {
         // container F
         container_F_repos.innerHTML = `<span class="cont-font "> Public Respositories: &nbsp </span>${res.data.public_repos}`
         container_F_gists.innerHTML = `<span class="cont-font "> Public Gists: &nbsp </span>${res.data.public_gists}`
-        
-        
     }) 
 }
 
