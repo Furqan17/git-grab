@@ -1,0 +1,2 @@
+- Add blog/website info
+- Change repository from "/users/" to "/?tab=repository"
