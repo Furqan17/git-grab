@@ -101,7 +101,8 @@ const displayData = () => {
         }
 
         // container F
-        container_F_repos.innerHTML = `<span class="cont-font "> Public Respositories: &nbsp </span>${res.data.public_repos}`
+        container_F_repos.innerHTML = `<span class="cont-font "> Public Respositories: &nbsp </span>
+            <a href="https://api.github.com/users/${res.data.login}/repos" target="_blank">${res.data.public_repos}</a>`
         container_F_gists.innerHTML = `<span class="cont-font "> Public Gists: &nbsp </span>${res.data.public_gists}`
     }) 
 }
