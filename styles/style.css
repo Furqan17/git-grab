@@ -31,3 +31,8 @@
 .cont_C-img:hover {
     transform: scale(1.05);
 }
+
+.heart-symbol {
+    margin: 0 .25em;
+    color: red;
+}
