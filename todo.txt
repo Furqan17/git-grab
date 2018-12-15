@@ -1,2 +1,1 @@
-- Find existing user solution instead of if/else 
-- Add blog/website info
+- Add blog/website info (optional)

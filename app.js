@@ -45,10 +45,14 @@ const displayData = () => {
     grabUsers(inputValue.value).then((res) => {
         console.log(res);
 
+        // Assign User bool
+        let userBool = false;
+        userBool = userExist(res.data);
+
         // Checks first if the user exists 
-        if ( res.data.message == "Not Found" ) {
+        if ( !userBool ) {
             // error message is shown
-            container_B_locat.innerHTML = `<span class="cont-font ">User Not found</span>`
+            container_B_locat.innerHTML = `<span class="cont-font ">User does not exist</span>`
             // if the user does not exist, all container are set to blank
             container_A_name.innerHTML = ""
             container_A_username.innerHTML = ""
@@ -137,6 +141,15 @@ const nullRes = (data) => {
         return true;
     } else {
         return false;
+    }
+}
+
+// Function to determine if user exists
+const userExist = (data) => {
+    if (data.message == "Not Found") {
+        return false;
+    } else {
+        return true;
     }
 }
 
