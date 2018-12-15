@@ -114,7 +114,8 @@ const displayData = () => {
                     <a href="https://github.com/${res.data.login}?tab=following" target="_blank">none</a>`
             } else {
                 container_D_following.innerHTML = `<span class="cont-font "> Following: &nbsp </span>
-                    <a href="https://github.com/${res.data.login}?tab=following" target="_blank">${res.data.following}</a>`
+                    <a href="https://github.com/${res.data.login}?tab=following" target="_blank">
+                        ${res.data.following}</a>`
             }
 
             // ---
