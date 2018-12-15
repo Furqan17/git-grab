@@ -45,6 +45,10 @@ const displayData = () => {
     grabUsers(inputValue.value).then((res) => {
         console.log(res);
 
+        // Checks first if user exists 
+        if ( res.data.message == "Not Found" ) {
+            container_B_locat.innerHTML = `<span class="cont-font ">User Not found</span>`
+        } else {
         // container A
         if ( nullRes(res.data.name) ) {
             container_A_name.innerHTML = `<span class="cont-font ">Name: &nbsp </span>${res.data.name}`
@@ -104,6 +108,7 @@ const displayData = () => {
         container_F_repos.innerHTML = `<span class="cont-font "> Public Respositories: &nbsp </span>
             <a href="https://github.com/${res.data.login}?tab=repositories" target="_blank">${res.data.public_repos}</a>`
         container_F_gists.innerHTML = `<span class="cont-font "> Public Gists: &nbsp </span>${res.data.public_gists}`
+        }
     }) 
 }
 
