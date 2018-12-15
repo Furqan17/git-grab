@@ -4,9 +4,8 @@
     align-items: center;
 }
 
-.font-noto {
-    font-family: 'Noto Sans', sans-serif;
-    font-size: 18px;
+.font-rale {
+    font-family: 'Raleway', sans-serif;
 }
 
 .font-robo {
@@ -17,7 +16,7 @@
     font-weight: bold;
     font-size: 20px;
     color: black;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 .cont_C-img {
