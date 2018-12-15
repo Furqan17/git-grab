@@ -45,69 +45,88 @@ const displayData = () => {
     grabUsers(inputValue.value).then((res) => {
         console.log(res);
 
-        // Checks first if user exists 
+        // Checks first if the user exists 
         if ( res.data.message == "Not Found" ) {
+            // error message is shown
             container_B_locat.innerHTML = `<span class="cont-font ">User Not found</span>`
+            // if the user does not exist, all container are set to blank
+            container_A_name.innerHTML = ""
+            container_A_username.innerHTML = ""
+            container_B_orgs.innerHTML = ""
+            container_C_img.innerHTML = ""
+            container_D_followers.innerHTML = ""
+            container_D_following.innerHTML = ""
+            container_E_bio.innerHTML = ""
+            container_F_gists.innerHTML = ""
+            container_F_repos.innerHTML = ""
         } else {
-        // container A
-        if ( nullRes(res.data.name) ) {
-            container_A_name.innerHTML = `<span class="cont-font ">Name: &nbsp </span>${res.data.name}`
-        } else {
-            container_A_name.innerHTML = `<span class="cont-font ">Name: &nbsp </span> Not available`
-        } 
-        container_A_username.innerHTML = `<span class="cont-font ">Username: &nbsp </span>${res.data.login}`
+            // Means user exists and all user information is shown
 
-        // container B
-        // conditions for location
-        if ( nullRes(res.data.location)) {
-            container_B_locat.innerHTML = `<span class="cont-font ">Location: &nbsp </span>${res.data.location}`
-        } else {
-            container_B_locat.innerHTML = `<span class="cont-font ">Location: &nbsp </span> Not available`
-        }
+            // ---
+            // container A
+            if ( nullRes(res.data.name) ) {
+                container_A_name.innerHTML = `<span class="cont-font ">Name: &nbsp </span>${res.data.name}`
+            } else {
+                container_A_name.innerHTML = `<span class="cont-font ">Name: &nbsp </span> Not available`
+            } 
+            container_A_username.innerHTML = `<span class="cont-font ">Username: &nbsp </span>${res.data.login}`
 
-        // conditions for organizations
-        if ( nullRes(res.data.company) ) {
-            container_B_orgs.innerHTML = `<span class="cont-font ">Organizations: &nbsp </span>
-            <a href="https://api.github.com/users/${res.data.login}/orgs" target="_blank">${res.data.company}</a>`
-        } else {
-            container_B_orgs.innerHTML = `<span class="cont-font ">Organizations: &nbsp </span> none`
-        }
+            // ---
+            // container B
+            // conditions for location
+            if ( nullRes(res.data.location)) {
+                container_B_locat.innerHTML = `<span class="cont-font ">Location: &nbsp </span>${res.data.location}`
+            } else {
+                container_B_locat.innerHTML = `<span class="cont-font ">Location: &nbsp </span> Not available`
+            }
 
-        // container C
-        container_C_img.innerHTML = `<a href="https://github.com/${res.data.login}" target="_blank">
-            <img class="cont_C-img" src=${res.data.avatar_url}><a/>`
+            // conditions for organizations
+            if ( nullRes(res.data.company) ) {
+                container_B_orgs.innerHTML = `<span class="cont-font ">Organizations: &nbsp </span>
+                <a href="https://api.github.com/users/${res.data.login}/orgs" target="_blank">${res.data.company}</a>`
+            } else {
+                container_B_orgs.innerHTML = `<span class="cont-font ">Organizations: &nbsp </span> none`
+            }
 
-        // container D
-        // followers container
-        if ( res.data.followers == 0 ) {
-            container_D_followers.innerHTML = `<span class="cont-font "> Followers: &nbsp </span> 
-                <a href="https://github.com/${res.data.login}?tab=followers" target="_blank">none</a>`
-        } else {
-            container_D_followers.innerHTML = `<span class="cont-font "> Followers: &nbsp </span>
-                <a href="https://github.com/${res.data.login}?tab=followers" target="_blank">${res.data.followers}</a>`
-        }
+            // ---
+            // container C
+            container_C_img.innerHTML = `<a href="https://github.com/${res.data.login}" target="_blank">
+                <img class="cont_C-img" src=${res.data.avatar_url}><a/>`
 
-        // following container
-        if ( res.data.following == 0 ) {
-            container_D_following.innerHTML = `<span class="cont-font "> Following: &nbsp </span> 
-                <a href="https://github.com/${res.data.login}?tab=following" target="_blank">none</a>`
-        } else {
-            container_D_following.innerHTML = `<span class="cont-font "> Following: &nbsp </span>
-                <a href="https://github.com/${res.data.login}?tab=following" target="_blank">${res.data.following}</a>`
-        }
+            // ---
+            // container D
+            // followers container
+            if ( res.data.followers == 0 ) {
+                container_D_followers.innerHTML = `<span class="cont-font "> Followers: &nbsp </span> 
+                    <a href="https://github.com/${res.data.login}?tab=followers" target="_blank">none</a>`
+            } else {
+                container_D_followers.innerHTML = `<span class="cont-font "> Followers: &nbsp </span>
+                    <a href="https://github.com/${res.data.login}?tab=followers" target="_blank">${res.data.followers}</a>`
+            }
 
-        // container E
-        // conditions for user bio
-        if ( nullRes(res.data.bio) ) {
-            container_E_bio.innerHTML = `<span class="cont-font ">Bio: &nbsp </span>${res.data.bio}`
-        } else {
-            container_E_bio.innerHTML = `<span class="cont-font ">Bio: &nbsp </span> none`
-        }
+            // following container
+            if ( res.data.following == 0 ) {
+                container_D_following.innerHTML = `<span class="cont-font "> Following: &nbsp </span> 
+                    <a href="https://github.com/${res.data.login}?tab=following" target="_blank">none</a>`
+            } else {
+                container_D_following.innerHTML = `<span class="cont-font "> Following: &nbsp </span>
+                    <a href="https://github.com/${res.data.login}?tab=following" target="_blank">${res.data.following}</a>`
+            }
 
-        // container F
-        container_F_repos.innerHTML = `<span class="cont-font "> Public Respositories: &nbsp </span>
-            <a href="https://github.com/${res.data.login}?tab=repositories" target="_blank">${res.data.public_repos}</a>`
-        container_F_gists.innerHTML = `<span class="cont-font "> Public Gists: &nbsp </span>${res.data.public_gists}`
+            // ---
+            // container E
+            // conditions for user bio
+            if ( nullRes(res.data.bio) ) {
+                container_E_bio.innerHTML = `<span class="cont-font ">Bio: &nbsp </span>${res.data.bio}`
+            } else {
+                container_E_bio.innerHTML = `<span class="cont-font ">Bio: &nbsp </span> none`
+            }
+
+            // ---
+            // container F
+            container_F_repos.innerHTML = `<span class="cont-font "> Public Respositories: &nbsp </span>
+                <a href="https://github.com/${res.data.login}?tab=repositories" target="_blank">${res.data.public_repos}</a>`
+            container_F_gists.innerHTML = `<span class="cont-font "> Public Gists: &nbsp </span>${res.data.public_gists}`
         }
     }) 
 }
