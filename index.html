@@ -3,23 +3,179 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>git-grab</title>
+    <title>Git-Grab</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+    .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    </style>
   </head>
-  <!-- body start -->
+
   <body>
-  <section class="section">
-    <div class="container">
-      <h1 class="title">
-        git-grab
-      </h1>
-      <p class="subtitle">
-        this webpage is under construction
-        <br>
-        it will be up soon™
-      </p>
-    </div>
-  </section>
+    <!-- top input/button section -->
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+
+                <div class="column is-one-third">
+                    <!-- empty column -->
+                </div>
+
+                <!-- main column -->
+                <div class="column is-one-third">
+                    <h1 class="title is-size-2 center font-robo">Git-Grab</h1>
+                    <p class="subtitle is-size-5 center font-rale" >a github profile retriever</p>
+
+                    <!-- the input field -->
+                    <div class="field is-small">
+                        <p class="control has-icons-left">
+                            <input class="input is-rounded font-rale" 
+                                id="searchInput" placeholder="Enter a Username here">
+                            <span class="icon is-medium is-left">
+                                <i class="fab fa-github"></i>
+                            </span>
+                        </p>
+                    </div>
+                    <!-- end of input field -->
+
+                    <!-- submit button -->
+                    <div class="center">
+                        <button class="button is-dark is-outlined is-normal" id="searchButton" style="margin:5px;">
+                        <span class="icon is-small">
+                            <i class="fas fa-search"></i>
+                        </span>
+                        <span class="font-rale"><strong>Search</strong></span>
+                        </button>
+                    </div>
+                    <!-- end of submit button -->
+
+                </div>
+                <!-- end of main column -->
+
+                <div class="column is-one-third">
+                    <!-- empty column -->
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- end of top input/button section -->
+
+    <!-- top Profile--1 show section -->
+    <section class="section">
+        <div class="container">
+
+            <!-- Columns from A, B, C -->
+            <div class="columns">
+
+                <!-- Column A -->
+                <div class="column center is-one-third">
+                    <div class="columns is-multiline">
+                        <div class="column is-full" style="padding:4px">
+                            <p class="center main_column_A_name font-rale"
+                                style="font-size:18px;"> </p>
+                        </div>
+                        <div class="column is-full" style="padding:4px">
+                            <p class="center main_column_A_username font-rale"
+                                style="font-size:18px;"> </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Column A -->
+
+                <!-- Column B -->
+                <div class="column center is-one-third">
+                    <div class="columns is-multiline">
+                        <div class="column is-full" style="padding:4px">
+                            <p class="center main_column_B_location font-rale"
+                                style="font-size:18px;"> </p>
+                        </div>
+                        <div class="column is-full" style="padding:4px">
+                            <p class="center main_column_B_organizations font-rale"
+                                style="font-size:18px;"> </p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <!-- End of Column B -->
+
+                <!-- Column C -->
+                <div class="column center is-one-third">
+                    <div class="column is-full" style="padding:4px">
+                        <div class="center main_column_C_image"> </div>
+                    </div>
+                </div>
+                <!-- End of Column C -->
+
+            </div>
+            <!-- End of Columns from A, B, C -->
+
+            <!-- Columns from D, E, F -->
+            <div class="columns">
+
+                <!-- Column D -->
+                <div class="column center is-one-third">
+                    <div class="columns is-multiline">
+                        <div class="column is-full" style="padding:4px">
+                            <p class="center main_column_D_followers font-rale"
+                                style="font-size:18px;"> </p>
+                        </div>
+                        <div class="column is-full" style="padding:4px">
+                            <p class="center main_column_D_following font-rale"
+                                style="font-size:18px;"> </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Column D -->
+
+                <!-- Column E -->
+                <div class="column center is-one-third">
+                    <div class="column is-full" style="padding:4px">
+                        <p class="center main_column_E_bio font-rale"
+                            style="font-size:18px;"> </p>
+                    </div>
+                </div>
+                <!-- End of Column E -->
+
+                <!-- Column F -->
+                <div class="column center is-one-third">
+                    <div class="columns is-multiline">
+                        <div class="column is-full" style="padding:4px">
+                            <p class="center main_column_F_repos font-rale"
+                                style="font-size:18px;"> </p>
+                        </div>
+                        <div class="column is-full" style="padding:4px">
+                            <p class="center main_column_F_gists font-rale"
+                                style="font-size:18px;"> </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Column F -->
+
+            </div>
+            <!-- End of Columns D, E, F -->
+
+        </div>
+    </section>
+    <!-- end of top Profile--1 show section -->
+
+    <!-- footer -->
+    <footer class="center has-text-gray  font-rale" style="font-size:16px;">...</footer>
+    <footer class="center has-text-gray font-rale" style="font-size:16px;">
+        Made with <span class="heart-symbol">❤</span></footer>
+    <footer class="center has-text-gray font-rale" style="font-size:16px;">
+        Copyright (&copy;) 2018&nbsp;
+            <a href="https://github.com/Furqan17" target="_blank"><strong>Furqan17</strong></a></footer>
+    
+
+    <!-- script file  -->
+    <script src="app.js"></script>
   </body>
 </html>
