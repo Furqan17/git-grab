@@ -6,4 +6,4 @@
 <p align="center"> <b> a GitHub profile grabber </b> </p>
 
 ## :information_source: Hosting 
-Git-Grab is hosted on GitHub using GitHub-Pages
+Git-Grab is hosted on GitHub using [GitHub-Pages](https://pages.github.com/)
