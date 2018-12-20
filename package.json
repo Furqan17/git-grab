@@ -1,7 +1,7 @@
 {
   "name": "git-grab",
   "version": "1.0.0",
-  "description": "",
+  "description": "a GitHub profile grabber",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +15,5 @@
   "bugs": {
     "url": "https://github.com/Furqan17/git-grab/issues"
   },
-  "homepage": "https://github.com/Furqan17/git-grab#readme"
+  "homepage": "https://github.com/Furqan17/git-grab"
 }
