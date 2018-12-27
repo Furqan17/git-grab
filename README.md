@@ -5,6 +5,12 @@
 
 <p align="center"> <b> a GitHub profile grabber </b> </p>
 
+<p align="center">
+  <a href="https://developer.github.com/v3/"><img src="https://img.shields.io/badge/GitHub API-v3-00bfff.svg"></a>
+  <a href="https://github.com/Furqan17/git-grab/blob/master/package.json"><img src="https://img.shields.io/badge/version-1.0.0-dc143c.svg"></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-ff69b4.svg"></a>
+</p>
+
 ## :mailbox_with_mail: API
 User information is provided by the [GitHub API](https://developer.github.com/v3/). After a certain amount of requests, the API will stop sending responses. You will then have to register for a [OAuth Application](https://github.com/settings/applications/new).
 
